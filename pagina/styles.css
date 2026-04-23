@@ -21,9 +21,18 @@ header {
 }
 header h1 {
     color: #f5f3f7;
-    font-size: 22px;
+    font-size: 100px;
+    background-image: url(img/cositas/8.png);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    animation: animate 20s linear infinite; 
 }
-
+@keyframes animate {
+    to {
+        background-position: -500px;
+    }
+}
 nav a {
     color: white;
     text-decoration: none;
