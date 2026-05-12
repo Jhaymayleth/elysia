@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "mifuente";
+  src: url(/elysia/assets/fonts/Bagind.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: #fff8dc;
+}
+
+header {
+  background-color: #1a1a2e;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #f5f3f7;
+  font-size: 100px;
+  background-image: url(/elysia/assets/img/products/8.png);
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  to {
+    background-position: -500px;
+  }
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 24px;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #c084fc;
+  background-color: rgba(192, 132, 252, 0.1);
+}
+
+#hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+section {
+  background-color: #16213e;
+  padding: 80px;
+  text-align: center;
+}
+
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/elysia/assets/img/products/8.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-botones {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+h1 {
+  font-family: "mifuente", sans-serif;
+}
+
+h2 {
+  color: #c084fc;
+  font-size: 300%;
+  margin-bottom: 40px;
+  font-family: "mifuente", sans-serif;
+}
+
+button {
+  width: 130px;
+  background-color: transparent;
+  color: #c084fc;
+  border: 2px solid #cd9efc;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+button:hover {
+  box-shadow: 0 0 22px #c084fc, 0 0 44px rgba(236, 72, 153, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+p {
+  color: #e2e2e2;
+  font-size: 16px;
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.nosotros-texto h3 {
+  color: #c084fc;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.nosotros-texto p {
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.tarjeta {
+  background-color: #1a2a4a;
+  border-radius: 80px;
+  padding: 30px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.tarjeta ::before {
+  content: "";
+  position: absolute;
+  background: conic-gradient(transparent, transparent, transparent, #8d1450);
+  animation: rotate 3s linear infinite;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.tarjeta h3 {
+  color: #c084fc;
+  margin-top: 15px;
+}
+
+.tarjeta p {
+  color: #e2e2e2;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 22px #c084fc, 0 0 44px rgba(236, 72, 153, 0.2);
+}
+
+#contacto {
+  background-color: #0f0f1a;
+  padding: 60px 40px;
+  text-align: center;
+}
+#contacto h2 {
+  color: #c084fc;
+  margin-bottom: 20px;
+}
+#contacto p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+#contacto a {
+  color: white;
+  text-decoration: none;
+}
+#contacto a:hover {
+  color: #c084fc;
+  text-decoration: underline;
+}
+#contacto i {
+  color: #c084fc;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+#pedidos {
+  background-color: #1a2a4e;
+  padding: 80px;
+  text-align: center;
+}
+
+#pedidos {
+  background-color: #1a2a4e;
+  padding: 80px;
+  text-align: center;
+}
+#pedidos form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#pedidos label {
+  color: #c084fc;
+  font-size: 18px;
+  text-align: left;
+}
+#pedidos input,
+#pedidos select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #c084fc;
+  background-color: #16213e;
+  color: white;
+  font-size: 16px;
+}
+#pedidos button {
+  background-color: #c084fc;
+  color: #1a1a2e;
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-left: 0;
+}
+#pedidos button:hover {
+  background-color: #a855f7;
+  box-shadow: 0 0 22px #c084fc;
+}
+
+@media (max-width: 768px) {
+  .grid-productos {
+    grid-template-columns: 1fr 1fr;
+  }
+  header h1 {
+    font-size: 50px;
+  }
+  header {
+    flex-direction: column;
+  }
+}
+@media (max-width: 480px) {
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-size: 35px;
+  }
+  button {
+    margin-left: 10px;
+  }
+}/*# sourceMappingURL=styles.css.map */
