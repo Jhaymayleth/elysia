@@ -1,6 +1,12 @@
+// Variables
+$color-morado: #c084fc;
+$color-fondo-oscuro: #16213e;
+$color-fondo-header: #1a1a2e;
+$color-texto: #e2e2e2;
+
 @font-face {
   font-family: "mifuente";
-  src: url(../fonts/Bagind.ttf);
+  src: url(../../public/fonts/Bagind.ttf);
 }
 * {
   margin: 0;
@@ -14,12 +20,10 @@
 body {
   background-color: #fff8dc;
 }
-
 header {
   background-color: #1a1a2e;
-  padding: 16px 40px;
+  padding: 16px 40px; 
 }
-
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -28,56 +32,54 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 header .logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 header h1 {
   color: #f5f3f7;
   font-size: 50px;
-  background-image: url(../img/products/8.png);
+  background-image: url(../../public/img/products/8.png);
   background-size: cover;
-  -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: transparent;
   animation: animate 20s linear infinite;
 }
-
 @keyframes animate {
   to {
     background-position: -500px;
   }
 }
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 15px;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #c084fc;
-  background-color: rgba(192, 132, 252, 0.1);
-}
+nav {
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
 
+    &:hover {
+      color: $color-morado;
+      background-color: rgba(192, 132, 252, 0.1);
+    }
+  }
+}
 #hero p {
   font-size: 24px;
   margin-bottom: 30px;
 }
-
 section {
   background-color: #16213e;
   padding: 80px;
   text-align: center;
 }
-
 #hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/products/8.png);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../public/img/products/8.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,13 +89,11 @@ section {
   justify-content: center;
   align-items: center;
 }
-
 .hero-botones {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
-
 h1 {
   font-family: "mifuente", sans-serif;
 }
@@ -104,7 +104,6 @@ h2 {
   margin-bottom: 40px;
   font-family: "mifuente", sans-serif;
 }
-
 button {
   width: 130px;
   background-color: transparent;
@@ -116,42 +115,37 @@ button {
   cursor: pointer;
   margin-left: 40px;
 }
-
 button:hover {
-  box-shadow: 0 0 22px #c084fc, 0 0 44px rgba(236, 72, 153, 0.2);
+  box-shadow:
+    0 0 22px #c084fc,
+    0 0 44px #ec489933;
   transition: box-shadow 0.3s ease;
 }
-
 p {
   color: #e2e2e2;
   font-size: 16px;
 }
-
 .nosotros-grid {
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 40px;
   align-items: center;
 }
-
 .nosotros-texto h3 {
   color: #c084fc;
   font-size: 24px;
   margin-bottom: 15px;
 }
-
 .nosotros-texto p {
   font-size: 20px;
   text-align: left;
   line-height: 1.8;
   margin-bottom: 20px;
 }
-
 .nosotros-imagen img {
   width: 100%;
   border-radius: 20px;
 }
-
 .grid-productos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -166,7 +160,6 @@ p {
   transition: 0.3s;
   position: relative;
 }
-
 .tarjeta::before {
   content: "";
   position: absolute;
@@ -177,96 +170,101 @@ p {
   border-radius: 80px;
   opacity: 0;
 }
-
 .tarjeta img {
   width: 100%;
   border-radius: 30px;
 }
-
 .tarjeta h3 {
   color: #c084fc;
   margin-top: 15px;
 }
-
 .tarjeta p {
   color: #e2e2e2;
   font-size: 18px;
   margin-top: 10px;
 }
-
 .tarjeta:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 22px #c084fc, 0 0 44px rgba(236, 72, 153, 0.2);
+  box-shadow:
+    0 0 22px #c084fc,
+    0 0 44px #ec489933;
 }
-
 #contacto {
   background-color: #0f0f1a;
   padding: 60px 40px;
   text-align: center;
-}
-#contacto h2 {
-  color: #c084fc;
-  margin-bottom: 20px;
-}
-#contacto p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-#contacto a {
-  color: white;
-  text-decoration: none;
-}
-#contacto a:hover {
-  color: #c084fc;
-  text-decoration: underline;
-}
-#contacto i {
-  color: #c084fc;
-  margin-right: 10px;
-  font-size: 20px;
-}
 
+  h2 {
+    color: $color-morado;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-morado;
+      text-decoration: underline;
+    }
+  }
+  i {
+    color: $color-morado;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+}
 #pedidos {
   background-color: #1a2a4e;
   padding: 80px;
   text-align: center;
-}
-#pedidos form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-#pedidos label {
-  color: #c084fc;
-  font-size: 18px;
-  text-align: left;
-}
-#pedidos input,
-#pedidos select {
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #c084fc;
-  background-color: #16213e;
-  color: white;
-  font-size: 16px;
-}
-#pedidos button {
-  background-color: #c084fc;
-  color: #1a1a2e;
-  border: none;
-  padding: 14px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-  width: 100%;
-  margin-left: 0;
-}
-#pedidos button:hover {
-  background-color: #a855f7;
-  box-shadow: 0 0 22px #c084fc;
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    color: $color-morado;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid $color-morado;
+    background-color: $color-fondo-oscuro;
+    color: white;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: $color-morado;
+    color: $color-fondo-header;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-left: 0;
+
+    &:hover {
+      background-color: #a855f7;
+      box-shadow: 0 0 22px $color-morado;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -297,4 +295,4 @@ p {
   button {
     margin-left: 10px;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
